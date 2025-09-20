@@ -21,16 +21,19 @@ The server will run on `http://localhost:3000`.
 ## API Endpoints
 
 ### Health Check
+
 - `GET /` - API information
 - `GET /health` - Health check
 
 ### Generate PDF
+
 - `POST /generate-pdf` - Generate PDF from URL (JSON body)
 - `GET /generate-pdf` - Generate PDF from URL (query parameters)
 
 ## Usage Examples
 
 ### POST Request
+
 ```bash
 curl -X POST http://localhost:3000/generate-pdf \
   -H "Content-Type: application/json" \
@@ -39,12 +42,14 @@ curl -X POST http://localhost:3000/generate-pdf \
 ```
 
 ### GET Request
+
 ```bash
 curl "http://localhost:3000/generate-pdf?url=https://example.com&filename=example.pdf" \
   --output example.pdf
 ```
 
 ### Advanced Options
+
 You can customize PDF generation by passing options in the POST request:
 
 ```json
@@ -65,16 +70,19 @@ You can customize PDF generation by passing options in the POST request:
 ## Key Features
 
 ### Two API Endpoints
+
 - `POST /generate-pdf` - Send URL in request body
 - `GET /generate-pdf?url=https://example.com` - Send URL as query parameter
 
 ### Advanced PDF Generation with Puppeteer
+
 - Optimized browser launch settings for production
 - Network idle waiting for complete page loading
 - Custom PDF options (A4, margins, headers/footers)
 - Background graphics included
 
 ### Production-Ready Features
+
 - Input validation and sanitization
 - Error handling and logging
 - CORS support
