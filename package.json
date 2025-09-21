@@ -4,8 +4,8 @@
   "description": "A Node.js API server that converts web URLs to PDF documents using Puppeteer",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
